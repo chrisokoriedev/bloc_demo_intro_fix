@@ -31,7 +31,7 @@ class _CartState extends State<Cart> {
         buildWhen: (previous, current) => current is! CartActionState,
         builder: (context, state) {
           switch (state.runtimeType) {
-            case CartSuccessState _:
+            case const (CartSuccessState):
               final successState = state as CartSuccessState;
               return ListView.builder(
                   itemCount: successState.cartItems.length,
